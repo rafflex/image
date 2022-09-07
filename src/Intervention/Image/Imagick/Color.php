@@ -193,9 +193,9 @@ class Color extends AbstractColor
         ];
 
         return (
-            $delta['r'] > $color_tolerance or
-            $delta['g'] > $color_tolerance or
-            $delta['b'] > $color_tolerance or
+            $delta['r'] > $color_tolerance ||
+            $delta['g'] > $color_tolerance ||
+            $delta['b'] > $color_tolerance ||
             $delta['a'] > $alpha_tolerance
         );
     }
@@ -265,7 +265,7 @@ class Color extends AbstractColor
     }
 
     /**
-     * Calculates RGA integer alpha value into float value
+     * Calculates RGBA integer alpha value into float value
      *
      * @param  int $value
      * @return float
